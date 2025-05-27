@@ -49,16 +49,16 @@ def main():
             error_msg = messagebox.showerror(title="Error", message= "Fields don't need to be empty") #Error box
         else:
             try:
-                with open("data.json", "r") as json_data:
+                with open("secret.json", "r") as json_data:
                     py_data = json.load(json_data) #converts the json data as py dict named py_data
                     py_data.update(data_dict) #Appends the new dict data with the py_data dictionary
 
                 #Write the new data in the json file
-                with open("data.json", "w") as json_data:
+                with open("secret.json", "w") as json_data:
                     json.dump(py_data, json_data, indent= 4)
             #If dile doesn't exist
             except FileNotFoundError:
-                with open("data.json", "w") as json_data:
+                with open("secret.json", "w") as json_data:
                     json.dump(data_dict, json_data, indent= 4)
 
             finally:
@@ -70,12 +70,12 @@ def main():
 
     def search_password():
         web = website_input.get()
-        with open("data.json") as data_file:
+        with open("secret.json") as data_file:
             data = json.load(data_file)
             if web in data:
                 website_search = data[web]["Email/User"]
                 password_search = data[web]["Password"]
-                messagebox.showinfo(title = "Search box", message= f" Email/User:{website_search}\n Password:{password_search}\n")
+                messagebox.showinfo(title = "Search box", message= f" Email/User: {website_search}\n Password: {password_search}\n")
 
     #Window layout
     window = Tk()
