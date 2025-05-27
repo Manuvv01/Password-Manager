@@ -7,6 +7,9 @@
   - [x] Website  
   - [x] Email  
   - [x] Password
+- [x] Confirmation popups
+  - [x] Saved
+  - [x] Search
 
 ## Password Functionality
 
