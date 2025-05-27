@@ -1,26 +1,26 @@
 # Password-Manager
 
 ## UI Development
-~~Create the layout~~
-~~Create input entries:~~  
-  ~~- Website~~  
-  ~~- Email~~  
-  ~~- Password~~
+
+- [x] Create the layout  
+- [x] Create input entries:  
+  - [x] Website  
+  - [x] Email  
+  - [x] Password
 
 ## Password Functionality
 
-~~- Generate passwords~~
-~~- Save passwords to JSON file~~
-~~- Search for saved passwords~~
-~~- Edit and delete saved entries~~
-- Clipboard
-  
+- [x] Generate passwords  
+- [x] Save passwords to JSON file  
+- [x] Search for saved passwords  
+- [x] Edit and delete saved entries  
+- [ ] Clipboard  
 
 ## Things to Work On
 
-- USB protection (unlock program only if specific USB connected)
-- Improve UI responsiveness and design
+- [ ] USB protection (unlock program only if specific USB connected)  
+- [ ] Improve UI responsiveness and design  
 
 ## Tools & Utilities
 
-~~- Convert .txt to JSON~~
+- [x] Convert .txt to JSON
