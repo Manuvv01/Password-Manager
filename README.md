@@ -32,6 +32,7 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 ## Tools & Utilities
 
 - [x] Convert .txt to JSON
+- [ ] Encrypt the gate
 
 ## Things to work in the future
 - [ ] Generate passwords using user-provided words combined with random symbols and numbers
