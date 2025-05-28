@@ -24,7 +24,9 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 
 ## Things to Work On
 
-- [ ] USB protection (unlock program only if specific USB connected)  
+- [ ] USB protection (unlock program only if specific USB connected)
+  - [x] Software Opens when USB is read
+  - [ ] Open when it takes the data
 - [ ] Improve UI responsiveness and design  
 
 ## Tools & Utilities
