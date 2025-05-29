@@ -1,5 +1,7 @@
 import bcrypt
 
+import usb
+
 # password = b"DontHackMe"
 # hash_password = "$2b$12$dG774NX0n.nUuvu89ajZPeFNbnFoqJRv6EmdR6hzPMU2OIDHU4h5y"
 #
@@ -16,5 +18,7 @@ import bcrypt
 # else:
 #     print("Incorrect")
 
-
+if __name__ == "__main__":
+    object_info= usb.get_obj()
+    print(object_info)
 
