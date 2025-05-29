@@ -7,9 +7,10 @@ import subprocess  # To open/run your software
 
 def get_usb_drives():
     usb_drives = []
+    # Get all disk partitions as a list of sdiskpart objects, each with attributes
     partitions = psutil.disk_partitions()
     for p in partitions:
-        if 'removable' in p.opts or 'cdrom' in p.opts:
+        if 'removable' in p.opts: #Find the opts attribute if is removable
             usb_drives.append(p.device)
     return usb_drives
 
@@ -22,6 +23,16 @@ def wait_for_usb():
             return usb_drives[0]  # Return drive path
         time.sleep(1)
 
+##Function to debug
+def check_usb_json(usb_drive):
+    json_path = os.path.join(usb_drive, "data.json")
+    print(json_path)
+    with open(json_path, "r") as data_file:
+        data = json.load(data_file) #returns obj 
+
+
 if __name__ == "__main__":
-    wait_for_usb()
-    password.main()
+    usb = wait_for_usb()
+    # password.main()
+    check_usb_json(usb)
+
