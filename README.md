@@ -14,6 +14,7 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 - [x] Confirmation popups
   - [x] Saved
   - [x] Search
+- [ ] Improve UI responsiveness and design  
 
 ## Password Functionality
 
@@ -27,12 +28,17 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 - [ ] USB protection (unlock program only if specific USB connected)
   - [x] Software Opens when USB is read
   - [x] Open when it takes the data
-- [ ] Improve UI responsiveness and design  
+- [ ] File Acess Validation
+  - [ ] Encrypt files
+  - [ ] Hash data credentials
+        
+## Data Structure
+
+- [ ] Use Hashmaps
 
 ## Tools & Utilities
 
 - [x] Convert .txt to JSON
-- [ ] Encrypt the gate
 
 ## Things to work in the future
 - [ ] Generate passwords using user-provided words combined with random symbols and numbers
