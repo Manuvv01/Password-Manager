@@ -30,15 +30,6 @@ def get_obj(usb_drive):
         file_data = json.load(f)
     return file_data
 
-##Function to debug
-def check_usb_json(usb_drive):
-    json_path = os.path.join(usb_drive, "data.json")
-    with open(json_path, "r") as data_file:
-        data = json.load(data_file) #returns obj
-        input_key = data.get("key")
-
-    print("Verifying Credentials....")
-    time.sleep(2)
 
 
     # if input_key == sys_key:
