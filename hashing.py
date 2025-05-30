@@ -1,24 +1,46 @@
 import bcrypt
+import json
+import time
+import usb, password
 
-import usb
+with open("data.json", "r") as data_file:
+    data = json.load(data_file)
 
-# password = b"DontHackMe"
-# hash_password = "$2b$12$dG774NX0n.nUuvu89ajZPeFNbnFoqJRv6EmdR6hzPMU2OIDHU4h5y"
+key = data.get("link-start")
+
+
+def verify(usb_driver):
+    data_usb = usb.get_obj(usb_driver) #Gets the obj of the USB
+    user_password = data_usb.get("key")
+
+    key_b = key.encode()
+    password_b = user_password.encode()
+
+    print("Verifying Credentials....")
+    time.sleep(2)
+
+    if bcrypt.checkpw(password_b, key_b):
+        print("Unlock")
+        return True
+    else:
+        print("Lock")
+        return False
+
+
+
+
+
+
+
+# key_hashed = key.encode()
+# password_b = password.encode()
 #
-# hash_pass = bcrypt.hashpw(password, bcrypt.gensalt())
-# hash_str=hash_pass.decode()
-#
-# ##Compare
-#
-# input_password = b"DontHackMe"
-# store_hash = hash_str.encode()
-#
-# if bcrypt.checkpw(input_password, store_hash):
-#     print("Match")
+# if bcrypt.checkpw(password_b, key_hashed):
+#     print("Unlock")
 # else:
-#     print("Incorrect")
+#     print("Lock")
 
-if __name__ == "__main__":
-    object_info= usb.get_obj()
-    print(object_info)
+
+
+# if __name__ == "__main__":
 

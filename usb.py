@@ -23,11 +23,12 @@ def wait_for_usb():
             return usb_drives[0]  # Return drive path
         time.sleep(1)
 
-def get_obj():
-    with open("data.json", "r") as f:
-        sys_data = json.load(f)
-        return sys_data
 
+def get_obj(usb_drive):
+    json_path = os.path.join(usb_drive, "data.json")
+    with open(json_path, "r") as f:
+        file_data = json.load(f)
+    return file_data
 
 ##Function to debug
 def check_usb_json(usb_drive):
@@ -36,12 +37,9 @@ def check_usb_json(usb_drive):
         data = json.load(data_file) #returns obj
         input_key = data.get("key")
 
-    with open("data.json", "r") as f:
-        sys_data = json.load(f)
-        sys_key = sys_data.get("key")
-
     print("Verifying Credentials....")
     time.sleep(2)
 
-    if input_key == sys_key:
-        password.main()
+
+    # if input_key == sys_key:
+    #     password.main()
