@@ -30,7 +30,8 @@ A secure password manager built with Python and Tkinter. It allows you to genera
   - [x] Open when it takes the data
 - [ ] File Acess Validation
   - [ ] Encrypt files
-  - [ ] Hash data credentials
+  - [x] Hash data credentials
+    - [ ] Serial Number
         
 ## Data Structure
 
