@@ -25,9 +25,12 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 
 ## Things to Work On
 
+- [x] HomeScreen
+  - [x] Create a gif as Home Screen
 - [ ] USB protection (unlock program only if specific USB connected)
   - [x] Software Opens when USB is read
   - [x] Open when it takes the data
+  - [ ] Link Home to the Software
 - [ ] File Acess Validation
   - [ ] Encrypt files
   - [x] Hash data credentials
