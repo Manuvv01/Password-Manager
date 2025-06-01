@@ -1,9 +1,7 @@
 import time
 import psutil #To access USB drives
-import password
 import os
 import json
-import subprocess  # To open/run your software
 
 def get_usb_drives():
     usb_drives = []
@@ -23,14 +21,9 @@ def wait_for_usb():
             return usb_drives[0]  # Return drive path
         time.sleep(1)
 
-
 def get_obj(usb_drive):
     json_path = os.path.join(usb_drive, "data.json")
     with open(json_path, "r") as f:
         file_data = json.load(f)
     return file_data
 
-
-
-    # if input_key == sys_key:
-    #     password.main()

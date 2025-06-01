@@ -1,7 +1,7 @@
 import bcrypt
 import json
 import time
-import usb, password
+import usb
 
 with open("data.json", "r") as data_file:
     data = json.load(data_file)
@@ -32,18 +32,3 @@ def verify(usb_driver):
     else:
         print("Lock")
         return False
-
-
-
-# key_hashed = key.encode()
-# password_b = password.encode()
-#
-# if bcrypt.checkpw(password_b, key_hashed):
-#     print("Unlock")
-# else:
-#     print("Lock")
-
-
-
-# if __name__ == "__main__":
-

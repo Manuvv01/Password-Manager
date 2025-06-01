@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import random, pyperclip, json
 
-def main():
+def main(window):
 
     #Password function
     def password_gen():
@@ -66,7 +66,6 @@ def main():
                 website_input.delete(0, END)
                 user_input.delete(0, END)
                 password_input.delete(0, END)
-                json_data.close()
 
     def search_password():
         web = website_input.get()
@@ -77,13 +76,17 @@ def main():
                 password_search = data[web]["Password"]
                 messagebox.showinfo(title = "Search box", message= f" Email/User: {website_search}\n Password: {password_search}\n")
 
-    #Window layout
-    window = Tk()
+
+    ##LAYOUT
+    for widget in window.winfo_children(): #Destroy widgets of the previous window(HOME)
+        widget.destroy()
+
     window.title("Password Generator")
     window.config(padx=50, pady=50)
 
     canvas = Canvas(width=200, height=200)
     logo = PhotoImage(file = "logo.png")
+    canvas.image = logo
     canvas.create_image(100,100, image = logo)
     canvas.grid(row = 0, column= 2)
 
@@ -124,5 +127,3 @@ def main():
 
     window.mainloop()
 
-if __name__ == "__main__":
-    main()
