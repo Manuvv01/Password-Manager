@@ -30,7 +30,7 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 - [ ] USB protection (unlock program only if specific USB connected)
   - [x] Software Opens when USB is read
   - [x] Open when it takes the data
-  - [ ] Link Home to the Software
+  - [x] Link Home to the Software
 - [ ] File Acess Validation
   - [ ] Encrypt files
   - [x] Hash data credentials
