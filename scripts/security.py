@@ -1,9 +1,8 @@
 import bcrypt
-import json
-import time
+import json, time
 import usb
 
-with open("data.json", "r") as data_file:
+with open("../data.json", "r") as data_file:
     data = json.load(data_file)
 
 key = data.get("link-start")
@@ -11,6 +10,7 @@ data_id = data.get("cookie")
 name = data.get("owner")
 
 def verify(usb_driver):
+
     #USB DATA
     data_usb = usb.get_obj(usb_driver) #obj
     user_password = data_usb.get("key")
@@ -32,3 +32,6 @@ def verify(usb_driver):
     else:
         print("Lock")
         return False
+
+# def encr(usb_driver):
+#     mstr_key = usb.get_key(usb_driver)

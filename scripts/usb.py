@@ -27,3 +27,10 @@ def get_obj(usb_drive):
         file_data = json.load(f)
     return file_data
 
+def get_key(usb_drive):
+    path = os.path.join(usb_drive, "apolo.txt")
+    with open(path, "rb") as f:
+        file_data = f.read()
+    return file_data
+
+

@@ -7,7 +7,7 @@ def home(window):
     window.title("Welcome")
     window.geometry("625x400")
 
-    gif_path = "chill_cat.gif"
+    gif_path = "../chill_cat.gif"
     gif = Image.open(gif_path)
 
     label = Label(window, bg="black")
