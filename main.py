@@ -1,7 +1,7 @@
 from tkinter import *
 from PIL import Image, ImageTk, ImageSequence
 import threading
-import usb,hashing,password
+import usb,security,password
 
 def home(window):
     window.title("Welcome")
@@ -23,7 +23,7 @@ def home(window):
 
     def open_soft():
         usb_info = usb.wait_for_usb()
-        if hashing.verify(usb_info):
+        if security.verify(usb_info):
             password.main(window)
         else:
             print("Error")
