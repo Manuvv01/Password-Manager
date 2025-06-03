@@ -49,16 +49,16 @@ def main(window):
             error_msg = messagebox.showerror(title="Error", message= "Fields don't need to be empty") #Error box
         else:
             try:
-                with open("../secret.json", "r") as json_data:
+                with open("secret.json", "r") as json_data:
                     py_data = json.load(json_data) #converts the json data as py dict named py_data
                     py_data.update(data_dict) #Appends the new dict data with the py_data dictionary
 
                 #Write the new data in the json file
-                with open("../secret.json", "w") as json_data:
+                with open("secret.json", "w") as json_data:
                     json.dump(py_data, json_data, indent= 4)
             #If dile doesn't exist
             except FileNotFoundError:
-                with open("../secret.json", "w") as json_data:
+                with open("secret.json", "w") as json_data:
                     json.dump(data_dict, json_data, indent= 4)
 
             finally:
@@ -69,7 +69,7 @@ def main(window):
 
     def search_password():
         web = website_input.get()
-        with open("../secret.json") as data_file:
+        with open("secret.json") as data_file:
             data = json.load(data_file)
             if web in data:
                 website_search = data[web]["Email/User"]
@@ -85,7 +85,7 @@ def main(window):
     window.config(padx=50, pady=50)
 
     canvas = Canvas(width=200, height=200)
-    logo = PhotoImage(file ="../logo.png")
+    logo = PhotoImage(file ="logo.png")
     canvas.image = logo
     canvas.create_image(100,100, image = logo)
     canvas.grid(row = 0, column= 2)

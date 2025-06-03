@@ -2,7 +2,7 @@ import bcrypt
 import json, time
 import usb
 
-with open("../data.json", "r") as data_file:
+with open("data.json", "r") as data_file:
     data = json.load(data_file)
 
 key = data.get("link-start")
