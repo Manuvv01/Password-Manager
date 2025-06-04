@@ -2,6 +2,7 @@ import time
 import psutil #To access USB drives
 import os
 import json
+import security
 
 def get_usb_drives():
     usb_drives = []
@@ -32,5 +33,4 @@ def get_key(usb_drive):
     with open(path, "rb") as f:
         file_data = f.read()
     return file_data
-
 

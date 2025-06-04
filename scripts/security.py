@@ -1,15 +1,39 @@
+from os import access
 import bcrypt
+from cryptography.fernet import Fernet
 import json, time
 import usb
 
-with open("data.json", "r") as data_file:
-    data = json.load(data_file)
-
-key = data.get("link-start")
-data_id = data.get("cookie")
-name = data.get("owner")
+# with open("data.json", "r") as data_file:
+#     data = json.load(data_file)
+#
+# key = data.get("link-start")
+# data_id = data.get("cookie")
+# name = data.get("owner")
 
 def verify(usb_driver):
+
+    def decr():
+        # OPEN KEY IN USB
+        access_key = usb.get_key(usb_driver)
+        # DECRYPT
+        f = Fernet(access_key)
+        # READ
+        with open("stargate.json", "rb") as x:
+            encrypt_file = x.read()
+
+        decrypt_file = f.decrypt(encrypt_file)
+
+        with open("huh.json", "wb") as a:
+            a.write(decrypt_file)
+    decr()
+
+    with open("huh.json", "r") as data_file:
+        data = json.load(data_file)
+
+    key = data.get("link-start")
+    data_id = data.get("cookie")
+    name = data.get("owner")
 
     #USB DATA
     data_usb = usb.get_obj(usb_driver) #obj
@@ -33,5 +57,3 @@ def verify(usb_driver):
         print("Lock")
         return False
 
-# def encr(usb_driver):
-#     mstr_key = usb.get_key(usb_driver)

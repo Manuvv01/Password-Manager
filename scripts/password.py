@@ -125,5 +125,5 @@ def main(window):
     add_button = Button(text="Add", width=36, command= store)
     add_button.grid(row=4, column= 1, columnspan= 2)
 
-    window.mainloop()
+    #window.mainloop()
 
