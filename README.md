@@ -33,6 +33,8 @@ A secure password manager built with Python and Tkinter. It allows you to genera
   - [x] Link Home to the Software
 - [ ] File Acess Validation
   - [ ] Encrypt files
+    - [x] System
+- [ ] When the user finishes using the software erase the decrypted files
   - [ ] Be able the user to save the files being encrypted 
   - [x] Hash data credentials
         
