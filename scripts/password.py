@@ -4,6 +4,7 @@ import random, pyperclip, json
 
 def main(window):
 
+
     #Password function
     def password_gen():
 
