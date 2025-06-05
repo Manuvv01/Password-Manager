@@ -22,15 +22,26 @@ def wait_for_usb():
             return usb_drives[0]  # Return drive path
         time.sleep(1)
 
+def get_usb():
+    usb_drives = get_usb_drives()
+    return usb_drives[0]
+
 def get_obj(usb_drive):
     json_path = os.path.join(usb_drive, "data.json")
     with open(json_path, "r") as f:
         file_data = json.load(f)
     return file_data
 
-def get_key(usb_drive):
-    path = os.path.join(usb_drive, "apolo.txt")
+# def get_key(usb_drive):
+#     path = os.path.join(usb_drive, "apolo.txt")
+#     with open(path, "rb") as f:
+#         file_data = f.read()
+#     return file_data
+
+
+def get_key():
+    usb_name = get_usb()
+    path = os.path.join(usb_name, "apolo.txt")
     with open(path, "rb") as f:
         file_data = f.read()
     return file_data
-
