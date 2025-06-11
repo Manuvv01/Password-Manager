@@ -14,7 +14,8 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 - [x] Confirmation popups
   - [x] Saved
   - [x] Search
-- [ ] Improve UI responsiveness and design  
+- [ ] Improve UI responsiveness and design
+  - [ ] Customtkinter  
 
 ## Password Functionality
 
