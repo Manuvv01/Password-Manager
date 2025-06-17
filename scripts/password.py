@@ -85,11 +85,12 @@ def main(window):
     window.title("Password Generator")
     window.config(padx=50, pady=50)
 
-    canvas = Canvas(width=200, height=200)
-    logo = PhotoImage(file ="logo.png")
+    canvas = Canvas(width=360, height=360)
+    logo = PhotoImage(file ="cat.png")
     canvas.image = logo
-    canvas.create_image(100,100, image = logo)
-    canvas.grid(row = 0, column= 2)
+    canvas.create_image(180,180, image = logo)
+    canvas.grid(row = 0, column= 2, columnspan=2)
+
 
     website = Label(text= "Website:")
     website.grid(row = 1, column = 0)

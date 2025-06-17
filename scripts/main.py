@@ -5,7 +5,7 @@ import usb,security,password
 
 def home(window):
     window.title("Welcome")
-    window.geometry("625x400")
+    window.geometry("625x625")
 
     gif_path = "chill_cat.gif"
     gif = Image.open(gif_path)
@@ -13,7 +13,7 @@ def home(window):
     label = Label(window, bg="black")
     label.pack(expand=True)
 
-    frames = [ImageTk.PhotoImage(frame.copy().resize((625, 400)))
+    frames = [ImageTk.PhotoImage(frame.copy().resize((625, 625)))
               for frame in ImageSequence.Iterator(gif)]
 
     def animate(index):
