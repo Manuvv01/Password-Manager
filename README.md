@@ -32,8 +32,8 @@ A secure password manager built with Python and Tkinter. It allows you to genera
   - [x] Software Opens when USB is read
   - [x] Open when it takes the data
   - [x] Link Home to the Software
-- [ ] File Acess Validation
-  - [ ] Encrypt files
+- [x] File Acess Validation
+  - [x] Encrypt files
     - [x] System
 - [ ] When the user finishes using the software erase the decrypted files
   - [ ] Be able the user to save the files being encrypted 
