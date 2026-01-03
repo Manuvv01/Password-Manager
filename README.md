@@ -15,7 +15,7 @@ A secure password manager built with Python and Tkinter. It allows you to genera
   - [x] Saved
   - [x] Search
 - [ ] Improve UI responsiveness and design
-  - [ ] Customtkinter  
+  - [ ] Customtkinter 
 
 ## Password Functionality
 
@@ -28,6 +28,7 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 
 - [x] HomeScreen
   - [x] Create a gif as Home Screen
+- [ ] Log In 
 - [ ] USB protection (unlock program only if specific USB connected)
   - [x] Software Opens when USB is read
   - [x] Open when it takes the data
@@ -42,6 +43,7 @@ A secure password manager built with Python and Tkinter. It allows you to genera
 ## Data Structure
 
 - [ ] Use Hashmaps
+- [ ] Sorting Alg Merge Alg
 
 ## Tools & Utilities
 
