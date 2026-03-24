@@ -4,3 +4,6 @@ stargate.json
 huh.json
 test.py
 saturno.json
+.idea/
+__pycache__/
+*.pyc
